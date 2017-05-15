@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .dinosaur {
+            text-align: center;
+        }
+
+        .dinosaur img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            margin-top: 45px;
+            margin-bottom: 35px;
+        }
+
+        .list {
+            margin-bottom: 13px;
+        }
+
+        .list span {
+            display: inline-block;
+            margin: 17px;
+            padding: 5px 25px;
+            background-color: rgb(217, 217, 217)
+        }
+
+        @media(max-width: 625px) {
+            .list {
+                max-width: 320px;
+                margin: 0 auto;
+                margin-bottom: 13px;
+            }
+        }
+
+        .category {
+            text-align: center;
+            padding-top: 45px;
+            padding-bottom: 55px;
+            background-color: rgb(239, 239, 239)
+        }
+
+        .category h2 {
+            margin-bottom: 30px;
+        }
+
+        .category .status-2 {
+            display: none;
+        }
+
+        .category .status-2>span {
+            display: inline-block;
+            max-width: 18em;
+            margin-top: 5px;
+        }
+
+        @media(max-width:420px) {
+            .category .status-1 {
+                display: none;
+            }
+            .category .status-2 {
+                display: block;
+            }
+        }
+
+        .category h2>span {
+            background: rgb(217, 217, 217)
+        }
+
+        .category p {
+            line-height: 20px;
+        }
+
+        .category .status-4 {
+            display: none;
+        }
+
+        .category .status-4>span {
+            display: inline-block;
+            max-width: 22em;
+            margin-top: 5px;
+        }
+
+        @media(max-width:375px) {
+            .category .status-3 {
+                display: none;
+            }
+            .category .status-4 {
+                display: block;
+            }
+        }
+
+        .category .status-5 {
+            display: none;
+        }
+
+        .category .status-6>span {
+            display: inline-block;
+            max-width: 22em;
+            margin-top: 5px;
+        }
+
+        @media(max-width:375px) {
+            .category .status-5 {
+                display: none;
+            }
+            .category .status-6 {
+                display: block;
+            }
+        }
+
+        .category p>span {
+            background: rgb(233, 233, 233)
+        }
+
+        .introduction {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .introduction ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            max-width: 950px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media(max-width: 770px) {
+            .introduction ul {
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        .introduction ul li {
+            max-width: 300px;
+            text-align: left;
+        }
+
+        .introduction ul li>img {
+			border:1px solid;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .introduction ul li h3 {
+            background: rgb(190, 190, 190);
+            display: inline-block;
+        }
+
+        .introduction ul li p {
+            background: rgb(233, 233, 233);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dinosaur">
+        <img src="https://ooo.0o0.ooo/2017/05/15/5919309d41f74.jpg" alt="动漫恐龙">
+        <div class="list">
+            <span>鸟类恐龙</span>
+            <span>蜥蜴恐龙</span>
+            <span>食草恐龙</span>
+            <span>食肉恐龙</span>
+        </div>
+    </div>
+    <div class="category">
+        <h2 class="status-1">
+            <span>恐龙的类别及一些乱杂七杂八的简介</span>
+        </h2>
+        <h2 class="status-2">
+            <span>恐龙的类别及一些</span>
+            <span>乱杂七杂八的简介</span>
+        </h2>
+        <p class="status-3">
+            <span>分成两大类:一类叫做鸟龙类，一类叫做蜥龙类</span>
+        </p>
+        <p class="status-4">
+            <span>分成两大类:一类叫做鸟龙类</span>
+            <span>一类叫做蜥龙类</span>
+        </p>
+        <p class="status-5">
+            <span>根据它们的牙齿化石，还可以推断出是食肉类还是食草类</span>
+        </p>
+        <p class="status-6">
+            <span>根据它们的牙齿化石</span>
+            <span>还可以推断出是食肉类还是食草类</span>
+        </p>
+    </div>
+    <div class="introduction">
+        <ul>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192aebcc8ba.jpg" alt="霸王龙">
+                <h3>霸王龙</h3>
+                <p>又名暴龙，属暴龙科中的一种，名字的意思是残暴的蜥蜴王。是史上最庞大的肉食性动物之一和最著名的食肉恐龙</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192b6b9b3ea.jpg" alt="上龙">
+                <h3>上龙</h3>
+                <p>上龙是一种已灭绝海生爬行动物，属于上龙科，生存于侏罗纪晚期。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/5919467ce8746.jpg" alt="棘龙">
+                <h3>棘龙</h3>
+                <p>棘龙(拉丁文学名：Spinosaurus，意思为「有棘的蜥蜴」)，是目前已知最大的食肉恐龙与兽脚亚目恐龙</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192d2855ad7.jpg" alt="梁龙">
+                <h3>梁龙</h3>
+                <p>梁龙是最容易确认的恐龙之一，有着巨大的体型，长颈及尾巴，及强壮的四肢。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192dbbdb7b6.jpg" alt="雷龙">
+                <h3>雷龙</h3>
+                <p>雷龙一般指迷惑龙，有着长颈及尾巴，它们的颈椎比梁龙较短、较重，而腿部骨头较梁龙的结实、较长，被认为是比梁龙更粗壮的恐龙。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192e9010ec3.jpg" alt="翼龙">
+                <h3>翼龙</h3>
+                <p>翼龙又名翼手龙(Pterosauria)，是一种已经灭绝的爬行类动物，典型的翼手龙的尾巴要比其它翼龙短，其头上长有头冠。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192f2724fd4.jpg" alt="鲨齿龙">
+                <h3>鲨齿龙</h3>
+                <p>鲨齿龙(学名Carcharodontosaurus)又名望齿龙，名字含义是“像噬人鲨的蜥蜴”，是体型最大的食肉恐龙之一。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/59192fe8ea8d5.jpg" alt="三角龙">
+                <h3>三角龙</h3>
+                <p>三角龙是角龙科中最著名属，角龙科是群中型北美洲角龙类恐龙。三角龙是一种中等大小的四足恐龙，三角龙最显著的特征是它们的角和颈盾。</p>
+            </li>
+            <li>
+                <img src="https://ooo.0o0.ooo/2017/05/15/591930360a727.jpg" alt="剑龙">
+                <h3>剑龙</h3>
+                <p>剑龙为一种巨大的草食性恐龙，是一种生存在侏罗纪晚期的食草性动物</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
