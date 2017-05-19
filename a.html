@@ -143,22 +143,22 @@ body{
     </div>
     <div class="j">↓</div>
     <div class="c">
-      min <- numbers.at(1)
+      min <- numbers(1)
     </div>
     <div class="j">↓</div>
-    <div class="d">n <- 1</div>
+    <div class="d">a = 1</div>
     <div class="j">↓</div>
     <div class="j2">←</div>
     <div class="e">
-      <div>n <= numbers.size
+      <div>a <= 1
       </div> 
     </div>
     <div class="j2">←</div>
     <div class="j1">↓<span>yes</span></div>
-    <div class="f">numbers.at(n) < min</div>
+    <div class="f">numbers(a) < min</div>
     <div class="j11"><span class="j33">no</span><span class="j22">→</span></div>
     <div class="j1">↓<span>yes</span></div>
-    <div class="g">min <- numbers.at(n)</div>
+    <div class="g">min = numbers(a)</div>
     <div class="j2">→</div>
     <div class="j">↓</div>
     <div class="j2">→</div>
@@ -168,7 +168,7 @@ body{
   </div>
   <div class="h">
     <div class="j3">↑</div>
-    <div class="k">n <- n + 1</div>
+    <div class="k">a = a + 1</div>
     <div class="j3">↑</div>
   </div>
   <div class="x">
