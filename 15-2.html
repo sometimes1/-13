@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>...</title>
+  <style>
+  body{
+  display:flex;
+  justify-content:center;
+}
+#z{
+  border:1px solid;
+  min-width: 550px;
+  display:flex;
+  justify-content:center;
+  position:relative;
+}
+.start {
+  max-width: 300px;
+  max-height: 1100px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.a,.b,.c,.d,.e,.f,.i,.g{
+  background: #1eff00;
+  width: 180px;
+  margin:10px 0px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.j{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 300px;
+  font-size:30px;
+}
+.j1 {
+  width: 200px;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+}
+.j11 {
+  width: 30px;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+  position:absolute;
+  top:500px;
+  left:330px;
+}
+.j11 .j33{
+  width: 20px;
+  font-size:12px;
+  display:inline-block;
+}
+.j111 {
+  width: 30px;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+  position:absolute;
+  top:660px;
+  left:350px;
+}
+.j111 .j333{
+  width: 20px;
+  font-size:12px;
+  display:inline-block;
+}
+.j1>span {
+  font-size:12px;
+  display:inline-block;     vertical-align:middle;
+  padding-bottom:10px;
+}
+.j2 {
+  display:flex;
+  align-items:center;
+  width: 30px;
+  font-size:30px;
+  text-align:right;
+}
+.j21 {
+  display:flex;
+  align-items:center;
+  width: 30px;
+  font-size:30px;
+  color:red;
+  text-align:right;
+}
+.j23 {
+  display:flex;
+  align-items:center;
+  width: 30px;
+  font-size:30px;
+  color:green;
+  text-align:right;
+}
+.j2>span{
+  font-size:12px;
+  display:inline-block; 
+  padding:10px;
+}
+.e{
+  width: 200px;
+    height: 100px;
+    background: #1eff00;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.f{
+    width: 200px;
+    height: 100px;
+    background: #1eff00;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.f1{
+    width: 250px;
+    height: 100px;
+    background: #1eff00;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  position:relative
+}
+.f11{
+  position:absolute;
+  top:40px;
+  right:15px;
+}
+.a{
+  width: 50px;
+  height: 40px;
+  border-radius:50%;
+}
+.h{
+  max-width: 110px;
+  min-height:350px;
+  margin-left:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  position:absolute;
+  top:500px;
+  right:-100px;
+}
+.h .j3{
+  font-size:30px;
+  color:red;
+  width: 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.h .k{
+  background: #1eff00;
+  width: 100%;
+  padding:10px;
+  margin-right:5px;
+}
+.x {
+  max-width: 50px;
+  min-height: 400px;
+  margin-right:10px;
+  position:absolute;
+  top:330px;
+  left:80px;
+}
+.x .j3{
+  font-size:30px;
+  padding:60px 0px;
+}
+.h1 {
+  max-width: 110px;
+  min-height:500px;
+  margin-left:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  position:absolute;
+  top:360px;
+  left:420px;
+}
+.h1 .j3{
+  font-size:30px;
+  color:green;
+  width: 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.h1 .k{
+  background: #1eff00;
+  width: 100%;
+  padding:10px;
+  margin-right:5px;
+}
+  </style>
+</head>
+<body>
+  <div id="z">
+    <div class="start">
+      <div class="a">开始</div>
+      <div class="j">↓</div>
+      <div class="b">
+        numbers = [......]
+      </div>
+      <div class="j">↓</div>
+      <div class="c">
+        a = 1
+      </div>
+      <div class="j">↓</div>
+      <div class="c">
+        b = 11
+      </div>
+      <div class="j">↓</div>
+      <div class="j2">←</div>
+      <div class="e">
+        <div>for (a from 0 to a-1)
+        </div> 
+      </div>
+      <div class="j23">←</div>
+      <div class="j1">↓<span>yes</span></div>
+      <div class="j2">←</div>
+      <div class="f">for (b from 0 to b-1-a)</div>
+      <div class="j21">←</div>
+      <div class="j1">↓<span>yes</span></div>
+      <div class="f1">
+        <div class="f11">
+          if (current[b] > current[b+1])
+        </div>
+      </div>
+      <div class="j111">
+        <span class="j333">no</span>
+        <span class="j222">→</span>
+      </div>
+      <div class="j1">↓<span>yes</span></div>
+      <div class="g">swap(this[b],this[b+1])</div>
+      <div class="j2">→</div>
+      <div class="j">↓</div>
+      <div class="j2">→</div>
+      <div class="i">print</div>
+      <div class="j">↓</div>
+      <div class="a">完</div>
+    </div>
+    <div class="h1">
+      <div class="j3">↑</div>
+      <div class="j3">↑</div>
+      <div class="j3">↑</div>
+      <div class="k">a = a + 1</div>
+      <div class="j3">↑</div>
+    </div>
+    <div class="h">
+      <div class="j3">←</div>
+      <div class="j3">↑</div>
+      <div class="k">b = b + 1</div>
+      <div class="j3">↑</div>
+    </div>
+    <div class="x">
+      <div class="j3">↓</div>
+      <div class="j3">↓</div>
+      <div class="j3">↓</div>
+      <div class="j3">↓</div>
+    </div>
+    </div>
+</body>
+</html>
