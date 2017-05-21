@@ -11,7 +11,6 @@ body{
   justify-content:center;
 }
 #z{
-  border:1px solid;
   min-width: 550px;
   max-height: 900px;
   display:flex;
@@ -25,7 +24,7 @@ body{
   flex-wrap:wrap;
   justify-content:center;
 }
-.a,.b,.c,.d,.e,.f,.i,.g{
+.a,.b,.c,.d,.e,.f,.i{
   background: #1eff00;
   width: 180px;
   margin:10px 0px;
@@ -55,6 +54,20 @@ body{
   top:500px;
   left:330px;
 }
+.j112 {
+  width: 30px;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+  position:absolute;
+  top:345px;
+  left:70px;
+}
+.j112 .j33{
+  width: 20px;
+  font-size:12px;
+  display:inline-block;
+}
 .j11 .j33{
   width: 20px;
   font-size:12px;
@@ -77,14 +90,22 @@ body{
   display:inline-block; 
   padding:10px;
 }
-.e{
+.g {
+  background: #1eff00;
   width: 200px;
+  margin:10px 0px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.e{
+  width: 230px;
     height: 100px;
     background: #1eff00;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 .f{
-    width: 200px;
+    width: 230px;
     height: 100px;
     background: #1eff00;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
@@ -95,8 +116,8 @@ body{
   border-radius:50%;
 }
 .h{
-  max-width: 110px;
-  min-height:400px;
+  max-width: 200px;
+  height:410px;
   margin-left:20px;
   display:flex;
   justify-content:center;
@@ -104,7 +125,7 @@ body{
   flex-wrap:wrap;
   position:absolute;
   top:350px;
-  right:0px;
+  right:-50px;
 }
 .h .j3{
   font-size:30px;
@@ -115,8 +136,6 @@ body{
 }
 .h .k{
   background: #1eff00;
-  width: 100%;
-  padding:10px;
   margin-right:5px;
 }
 .x {
@@ -143,22 +162,22 @@ body{
     </div>
     <div class="j">↓</div>
     <div class="c">
-      min = numbers(1)
+      min = numbers.get(1)
     </div>
     <div class="j">↓</div>
-    <div class="d">a = 1</div>
+    <div class="d">index = 1</div>
     <div class="j">↓</div>
-    <div class="j2">←</div>
+    <div class="j112"><span class="j33">no</span><span class="j22">→</span></div>
     <div class="e">
-      <div>a <= 1
+      <div>index <= numbers.length
       </div> 
     </div>
     <div class="j2">←</div>
     <div class="j1">↓<span>yes</span></div>
-    <div class="f">numbers(a) < min</div>
+    <div class="f">numbers.get(index) < min</div>
     <div class="j11"><span class="j33">no</span><span class="j22">→</span></div>
     <div class="j1">↓<span>yes</span></div>
-    <div class="g">min = numbers(a)</div>
+    <div class="g">min = numbers.get(index)</div>
     <div class="j2">→</div>
     <div class="j">↓</div>
     <div class="j2">→</div>
@@ -168,7 +187,7 @@ body{
   </div>
   <div class="h">
     <div class="j3">↑</div>
-    <div class="k">a = a + 1</div>
+    <div class="k">index = index + 1</div>
     <div class="j3">↑</div>
   </div>
   <div class="x">
