@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>...</title>
+  <title>15-2</title>
   <style>
   body{
   display:flex;
   justify-content:center;
 }
 #z{
-  border:1px solid;
   min-width: 550px;
   display:flex;
   justify-content:center;
@@ -23,6 +22,20 @@
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+}
+.j112 {
+  width: 30px;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+  position:absolute;
+  top:345px;
+  left:70px;
+}
+.j112 .j33{
+  width: 20px;
+  font-size:12px;
+  display:inline-block;
 }
 .a,.b,.c,.d,.e,.f,.i,.g{
   background: #1eff00;
@@ -90,7 +103,6 @@
   align-items:center;
   width: 30px;
   font-size:30px;
-  color:red;
   text-align:right;
 }
 .j23 {
@@ -98,7 +110,7 @@
   align-items:center;
   width: 30px;
   font-size:30px;
-  color:green;
+  color:red;
   text-align:right;
 }
 .j2>span{
@@ -111,24 +123,41 @@
     height: 100px;
     background: #1eff00;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  position:relative
+}
+.rotate1{
+  position:absolute;
+  right:30px;
+  left:30px
 }
 .f{
     width: 200px;
     height: 100px;
     background: #1eff00;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  position:relative
+}
+.rotate2{
+  display:inline-block;
+  text-align:center;
+  position:absolute;
+  right:30px;
+  left:30px
 }
 .f1{
     width: 250px;
-    height: 100px;
+    height: 120px;
     background: #1eff00;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   position:relative
 }
 .f11{
+  width: 180px;
+  display:inline-block;
+  text-align:center;
   position:absolute;
-  top:40px;
-  right:15px;
+  top:30px;
+  left:30px;
 }
 .a{
   width: 50px;
@@ -137,19 +166,18 @@
 }
 .h{
   max-width: 110px;
-  min-height:350px;
+  min-height:580px;
   margin-left:20px;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
   position:absolute;
-  top:500px;
+  top:530px;
   right:-100px;
 }
 .h .j3{
   font-size:30px;
-  color:red;
   width: 100px;
   display:flex;
   justify-content:center;
@@ -171,23 +199,37 @@
 }
 .x .j3{
   font-size:30px;
-  padding:60px 0px;
+  padding:55px 0px;
 }
 .h1 {
   max-width: 110px;
-  min-height:500px;
+  min-height:580px;
   margin-left:20px;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
   position:absolute;
-  top:360px;
+  top:530px;
   left:420px;
+}
+.j7 {
+  width: 30px;
+  color:red;
+  font-size:30px;
+  text-align:center;
+  margin:0px 50px;
+  position:absolute;
+  top:490px;
+  left:300px;
+}
+.j7 .j333{
+  width: 20px;
+  font-size:12px;
+  display:inline-block;
 }
 .h1 .j3{
   font-size:30px;
-  color:green;
   width: 100px;
   display:flex;
   justify-content:center;
@@ -198,6 +240,22 @@
   width: 100%;
   padding:10px;
   margin-right:5px;
+}
+.p{
+  width: 30px;
+  height: 20px;
+  position:absolute;
+  top:330px;
+  right:200px;
+}
+.p .j3{
+  margin:70px;
+  font-size:30px;
+  color:red;
+  width: 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
   </style>
 </head>
@@ -211,53 +269,71 @@
       </div>
       <div class="j">↓</div>
       <div class="c">
-        a = 1
+        第几次循环 = 1
       </div>
       <div class="j">↓</div>
       <div class="c">
-        b = 11
+       指向第几个 = 1
       </div>
       <div class="j">↓</div>
-      <div class="j2">←</div>
+      <div class="j112"><span class="j33">no</span><span class="j22">←</span></div>
       <div class="e">
-        <div>for (a from 0 to b-1)
+        <div class="rotate1">
+          第几次循环 <= numbers.length
         </div> 
       </div>
       <div class="j23">←</div>
       <div class="j1">↓<span>yes</span></div>
-      <div class="j2">←</div>
-      <div class="f">for (b from 0 to b-1-a)</div>
+      <div class="f">
+        <div class="rotate2">
+          指向第几个<=numbers.length - 第几次循环
+        </div>
+      </div>
+       <div class="j7">
+        <span class="j333">end</span>
+        <span class="j222">→</span>
+      </div>
       <div class="j21">←</div>
       <div class="j1">↓<span>yes</span></div>
       <div class="f1">
         <div class="f11">
-          if (current[b] > current[b+1])
+          numbers.get(指向第几个) > numbers.get(指向第几个 + 1)
         </div>
       </div>
+        <div class="j1">↓<span>yes</span></div>
+        <div class="i">
+          temp=numbers.get(指向第几个)
+        </div>
       <div class="j111">
         <span class="j333">no</span>
         <span class="j222">→</span>
       </div>
-      <div class="j1">↓<span>yes</span></div>
-      <div class="g">swap(this[b],this[b+1])</div>
-      <div class="j2">→</div>
+<div class="j">↓</div>
+      <div class="g">numbers.get(指向第几个) = numbers.get(指向第几个+1)</div>
+      
       <div class="j">↓</div>
+        <div class="i">
+          numbers.get(指向第几个+1) = temp
+        </div>
       <div class="j2">→</div>
-      <div class="i">print</div>
+         <div class="j">↓</div>
+        <div class="j2">→</div>
+      <div class="i">return numbers</div>
       <div class="j">↓</div>
       <div class="a">完</div>
     </div>
     <div class="h1">
       <div class="j3">↑</div>
+      <div class="k">第几次循环 + 1</div>
       <div class="j3">↑</div>
       <div class="j3">↑</div>
-      <div class="k">a = a + 1</div>
       <div class="j3">↑</div>
     </div>
     <div class="h">
-      <div class="j3">←</div>
       <div class="j3">↑</div>
-      <div class="k">b = b + 1</div>
+      <div class="k">指向第几个 + 1</div>
+      <div class="j3">↑</div>
+      <div class="j3">↑</div>
       <div class="j3">↑</div>
     </div>
     <div class="x">
@@ -265,7 +341,13 @@
       <div class="j3">↓</div>
       <div class="j3">↓</div>
       <div class="j3">↓</div>
+      <div class="j3">↓</div>
+      <div class="j3">↓</div>
     </div>
+    <div class="p">
+      <div class="j3">↑</div>
+      <div class="j3">↑</div>
     </div>
+ </div>
 </body>
 </html>
