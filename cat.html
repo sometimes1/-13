@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>卡通猫</title>
+  <style>
+    *{
+  box-sizing:border-box;
+}
+body{
+  display:flex;
+  justify-content:center;
+}
+.container{
+  background-color:#fff;
+  min-width:600px;
+  max-height:600px;
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  z-index:-99;
+}
+.face{
+  width: 280px;
+  height:250px;
+  margin-top:50px;
+  border-radius:50%;
+  background:rgb(34,23,21);
+  position:relative;
+}
+.eye{
+  width:70px;
+  height:70px;
+  display:inline-block;
+  text-align: center;
+  vertical-align;
+  border-radius:50%;
+  position:absolute;
+  top:45%;
+  left:15%;
+  background-color:#fff;
+}
+.eyeball{
+  width:25px;
+  height:25px;
+  background-color:rgb(34,23,21);
+  border-radius:50%;
+  position:absolute;
+  top:55%;
+  left:27%;
+}
+.eye2{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  position:absolute;
+  top:45%;
+  right:15%;
+  background:#fff;
+}
+.eyeball2{
+  width:25px;
+  height:25px;
+  background-color:rgb(34,23,21);
+  border-radius:50%;
+  position:absolute;
+  top:55%;
+  right:27%;
+}
+.nose{
+  width:27px;
+  height:20px;
+  border-radius:50%;
+  background-color:rgb(248,139,16);
+  position:absolute;
+  top:70%;
+  left:45%;
+}
+.ear{
+  border:15px solid rgb(34,23,21);
+  width:200px;
+  height:80px;
+  border-radius:70%;
+  background:#fff;
+  transform:rotate(60deg);
+  position:absolute;
+  top:13%;
+  left:-15%;
+  z-index:-1;
+}
+.ear2{
+  border:15px solid rgb(34,23,21);
+  width:200px;
+  height:80px;
+  border-radius:70%;
+  background:#fff;
+  transform:rotate(-60deg);
+  position:absolute;
+  top:13%;
+  right:-15%;
+  z-index:-1;
+}
+.beard{
+  border:2px solid rgb(34,23,21);
+  width: 70px;
+  border-radius:25%;
+  position:absolute;
+  left:-10%;
+  top:65%;
+  transform:rotate(10deg);
+}
+.beard2{
+  border:2px solid rgb(34,23,21);
+  width: 50px;
+  border-radius:25%;
+  position:absolute;
+  left:-5%;
+  top:75%;
+  transform:rotate(-20deg);
+}
+.beard3{
+  border:2px solid rgb(34,23,21);
+  width: 70px;
+  border-radius:25%;
+  position:absolute;
+  top:82%;
+  transform:rotate(-40deg);
+}
+.beard4{
+  border:2px solid rgb(34,23,21);
+  width: 70px;
+  border-radius:25%;
+  position:absolute;
+  right:-10%;
+  top:65%;
+  transform:rotate(-10deg);
+}
+.beard5{
+  border:2px solid rgb(34,23,21);
+  width: 50px;
+  border-radius:25%;
+  position:absolute;
+  right:-5%;
+  top:75%;
+  transform:rotate(20deg);
+}
+.beard6{
+  border:2px solid rgb(34,23,21);
+  width: 70px;
+  border-radius:25%;
+  position:absolute;
+  right:0;
+  top:82%;
+  transform:rotate(40deg);
+}
+.neck{
+  width: 100px;
+  height:50px;
+  background:rgb(129,175,220);
+  border-radius:50%;
+  position:absolute;
+  bottom:-6%;
+  right:50%;
+  z-index:-1;
+  transform:translateX(50%)
+}
+.tummy{
+  background:rgb(34,23,21);
+  width: 120px;
+  height:120px;
+  border:2px solid #fff;
+  border-radius:50%;
+  position:absolute;
+  bottom:-45%;
+  right:50%;
+  transform:translateX(50%);
+  z-index:-3;
+}
+.tummy2{
+  background:rgb(34,23,21);
+  width: 100px;
+  height:100px;
+  border-radius:50%;
+  position:absolute;
+  bottom:-30%;
+  right:50%;
+  transform:translateX(50%);
+  z-index:-2;
+}
+.hand{
+  width: 40px;
+  height:150px;
+  background:rgb(34,23,21);
+  border-radius:40%;
+  position:absolute;
+  top:75%;
+  left:27%;
+  transform:rotate(45deg);
+  z-index:-4;
+}
+.hand2{
+  width: 40px;
+  height:150px;
+  background:rgb(34,23,21);
+  border-radius:40%;
+  position:absolute;
+  top:75%;
+  right:27%;
+  transform:rotate(-45deg);
+  z-index:-4;
+}
+.foot{
+  background:rgb(34,23,21);
+  width: 30px;
+  height:40px;
+  position:absolute;
+  bottom:-50%;
+  left:37%;
+}
+.foot2{
+  background:rgb(34,23,21);
+  width: 40px;
+  height:30px;
+  border-radius:50%;
+  position:absolute;
+  bottom:-55%;
+  left:35%;
+}
+.foot3{
+  background:rgb(34,23,21);
+  width: 30px;
+  height:40px;
+  position:absolute;
+  bottom:-50%;
+  right:37%;
+}
+.foot4{
+  background:rgb(34,23,21);
+  width: 40px;
+  height:30px;
+  border-radius:50%;
+  position:absolute;
+  bottom:-55%;
+  right:35%;
+}
+.tail{
+  font-size:200px;
+  font-family: ;
+  color:rgb(34,23,21);
+  transform:rotate(140deg);
+  position:absolute;
+  top:85%;
+  left:60%;
+}
+.tail2{
+  background:rgb(34,23,21);
+  width: 13px;
+  height:10px;
+  border-radius:50%;
+  position:absolute;
+  bottom:0;
+  right:3.5%;
+  transform:rotate(130deg)
+}
+  </style>
+</head>
+
+<body>
+  <button>点我</button>
+  <script>
+    var buttons = document.getElementsByTagName('button');
+    var button = buttons[0];
+    var face;
+    var queue = [
+      function () {
+        var container = document.createElement('div');
+        container.className = 'container';
+        document.body.appendChild(container);
+        face = document.createElement('div');
+        face.className = 'face';
+        container.appendChild(face);
+      },
+      function () {
+        var eye = document.createElement('span');
+        eye.className = 'eye';
+        var eyeball = document.createElement('span');
+        eyeball.className = 'eyeball';
+        var eye2 = document.createElement('span');
+        eye2.className = 'eye2';
+        var eyeball2 = document.createElement('span');
+        eyeball2.className = 'eyeball2';
+        face.appendChild(eye);
+        face.appendChild(eyeball);
+        face.appendChild(eye2);
+        face.appendChild(eyeball2);
+      },
+      function () {
+        var nose = document.createElement('span');
+        nose.className = 'nose';
+        face.appendChild(nose);
+      },
+      function () {
+        var ear = document.createElement('span');
+        ear.className = 'ear';
+        var ear2 = document.createElement('span');
+        ear2.className = 'ear2';
+        face.appendChild(ear);
+        face.appendChild(ear2);
+      },
+      function () {
+        var ear = document.createElement('span');
+        ear.className = 'ear';
+        var ear2 = document.createElement('span');
+        ear2.className = 'ear2';
+        face.appendChild(ear);
+        face.appendChild(ear2);
+      },
+      function () {
+        var beard = document.createElement('span');
+        beard.className = 'beard';
+        var beard2 = document.createElement('span');
+        beard2.className = 'beard2';
+        var beard3 = document.createElement('span');
+        beard3.className = 'beard3';
+        var beard4 = document.createElement('span');
+        beard4.className = 'beard4';
+        var beard5 = document.createElement('span');
+        beard5.className = 'beard5';
+        var beard6 = document.createElement('span');
+        beard6.className = 'beard6';
+        face.appendChild(beard);
+        face.appendChild(beard2);
+        face.appendChild(beard3);
+        face.appendChild(beard4);
+        face.appendChild(beard5);
+        face.appendChild(beard6);
+      },
+      function () {
+        var neck = document.createElement('span');
+        neck.className = 'neck';
+        face.appendChild(neck);
+      },
+      function () {
+        var tummy = document.createElement('span');
+        tummy.className = 'tummy';
+        var tummy2 = document.createElement('span');
+        tummy2.className = 'tummy2';
+        face.appendChild(tummy);
+        face.appendChild(tummy2);
+      },
+      function () {
+        var hand = document.createElement('span');
+        hand.className = 'hand';
+        var hand2 = document.createElement('span');
+        hand2.className = 'hand2';
+        face.appendChild(hand);
+        face.appendChild(hand2);
+      },
+      function () {
+        var foot = document.createElement('span');
+        foot.className = 'foot';
+        var foot2 = document.createElement('span');
+        foot2.className = 'foot2';
+        var foot3 = document.createElement('span');
+        foot3.className = 'foot3';
+        var foot4 = document.createElement('span');
+        foot4.className = 'foot4';
+        face.appendChild(foot);
+        face.appendChild(foot2);
+        face.appendChild(foot3);
+        face.appendChild(foot4);
+      },
+      function () {
+        var tail = document.createElement('span');
+        tail.className = 'tail';
+        if (tail.innerText) {
+          tail.innerText = '⌒';
+        } else {
+          tail.textContent = '⌒';
+        }
+        face.appendChild(tail);
+
+        var tail2 = document.createElement('span');
+        tail2.className = 'tail2';
+        face.appendChild(tail2);
+      }
+    ];
+
+    button.onclick = function () {
+      var i = queue.shift();
+      i.call();
+    };
+  </script>
+</body>
+
+</html>
