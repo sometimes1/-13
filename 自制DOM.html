@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    '你在找我吗?我就是你要找的文本'
+    <button>清空p[0]</button>
+    <p id="i">找我大哥</p>
+    <script src="dom.js"></script>
+    <script>
+        //dom.create
+        var div = dom.create('div',
+            [dom.create('h2', '织毛衣'),
+            dom.create('p', '我深深的爱着你，你却爱着一个傻比'),
+            dom.create('p', '傻比却不爱你，你比傻比还傻比')
+            ])
+        document.body.appendChild(div)
+        //dom.find
+        var result = dom.find('p')
+        //dom.bigBrother
+        var 找我大哥 = dom.find('#i')[0]
+        console.log(dom.bigBrother(找我大哥))
+        //dom.empty
+        var paragraphs = dom.find('p', result[0])
+        var p = paragraphs[0]
+        document.getElementsByTagName('button')[0].onclick = function () {
+            dom.empty(p)
+        }
+        //dom.children
+        console.log(dom.children(document.body))
+        //dom.text
+        console.log(dom.text(document.body))
+        //dom.style
+        dom.style(document.body, {
+            border: '1px solid red',
+            background: '#cdcdcd'
+        })
+        //dom.attr
+        dom.attr(document.body, {
+            id: 'xxx'
+        })
+    </script>
+</body>
+
+</html>
