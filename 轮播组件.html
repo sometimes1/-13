@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>轮播</title>
+  <style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+ol,li{
+  list-style: none;
+}
+body{
+  background:#f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.outline{
+  margin-top:30px;
+  text-align: center;
+}
+.show{
+  min-width: 600px;
+  text-align:center;
+}
+.show>h1{
+  color:#444444;
+  font-family:Myriad Pro;
+  padding:15px;
+  font-size:42px;
+  font-weight: normal;
+}
+.show>h2{
+  font-size:16px;
+  color:#444444;
+  font-weight: normal;
+  margin-bottom:30px;
+}
+.show>h2>a{
+  font-size:14px;
+  color:blue;
+}
+.slides >.picture{
+  max-width: 920px;
+  margin:0 auto;
+  overflow: hidden;
+  border:1px solid #ddd;
+  border-bottom:none;
+}
+
+.slides >.picture > ol{
+  display: flex;
+  transition: transform 0.5s;
+}
+.slides >.picture > ol> li{
+  width: 100%;
+  max-height: 400px;
+}
+
+.option{
+  margin: 0px auto;
+  max-width: 920px;
+  border:1px solid #ddd;
+  border-top:none;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  margin-bottom:13px;
+}
+.option>ol{
+  border:1px solid #fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  background:url(https://ooo.0o0.ooo/2017/06/22/594bdad5d72b2.jpg) repeat;
+  
+}
+.option>ol>li{
+  background: url(https://ooo.0o0.ooo/2017/06/22/594bdad5dc64a.png) no-repeat left;
+  width: 60px;
+  height: 45px;
+  display:flex;
+}
+.option>ol>li>button{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 60px;
+  border:none;
+  background:none;
+  cursor:pointer; 
+  outline:none;
+}
+.option>ol>#a{
+  width: 1px;
+}
+.option>ol>li.active>button{
+  background: url(https://ooo.0o0.ooo/2017/06/24/594e7462808d6.png);;
+  cursor:default;
+}
+.option>ol>li.active>button:focus { 
+  outline: none;
+}
+.option>ol>li:hover{
+  background-color:rgba(255,255,255,0.3);
+}
+.p1{
+  font-size:13px;
+  padding:10px;
+  color: #444444;
+}
+.p2{
+  font-size:10px;
+  padding:10px;
+  color: #444444;
+}
+p>a, P>a:visited {
+  color: #0196e3;
+  text-decoration: none;
+}
+P>a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="outline">
+    <div class="show">
+      <h1>Apple-like Gallery
+      <br>
+        <b>Slideshow</b>
+      </h1>
+      <h2>View the <a href="#">original tutorial »</a></h2>
+    </div>
+    <div class="slides">
+      <div class="picture">
+        <ol>
+          <li><img src="https://ooo.0o0.ooo/2017/06/20/59493e11ae6c5.jpg" alt="苹果笔记本电脑">
+          </li>
+          <li><img src="https://ooo.0o0.ooo/2017/06/20/59493dfc5dd36.jpg" alt="苹果手机">
+          </li>
+          <li><img src="https://ooo.0o0.ooo/2017/06/20/59493dce4be5e.jpg" alt="苹果电脑">
+          </li>
+          <li><img src="https://ooo.0o0.ooo/2017/06/20/59493d99760ba.jpg" alt="苹果log">
+          </li>
+        </ol>
+      </div>
+      <div class="option">
+        <ol>
+          <li class="active">
+            <button>
+              <img src="https://ooo.0o0.ooo/2017/06/21/594a006a1cad1.png">
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="https://ooo.0o0.ooo/2017/06/21/594a0084696c0.png">
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="https://ooo.0o0.ooo/2017/06/21/594a009178fd2.png">
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="https://ooo.0o0.ooo/2017/06/21/594a009faf3fb.png">
+            </button>
+          </li>
+          <li id ="a"></li>
+        </ol>
+      </div>
+    </div>
+    <p class="p1">This is a tutorialzine demo. View the <a href="#">original tutorial</a> to read and download the source files.</p>
+    <p class="p2">The gallery features artwork from <a href="#">rambocre</a>,<a href="#">pickupjojo</a> and <a href="#">codenamebender</a></p>
+  </div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+  </script>
+  <script>
+  $('.slides').on('click', '.option li', function(e) {
+  let $li = $(e.currentTarget);
+  let index = $li.index();
+  go(index);
+});
+
+function go(index) {
+  $('.slides > .option li').eq(index).addClass('active').siblings().removeClass('active');
+  let width = $('.slides > .picture').width();
+  $('.slides > .picture > ol').css({
+    transform: 'translateX(' + (-width * index) + 'px)'
+  });
+}
+
+let current = 0;
+
+setInterval(function(){
+  let nextIndex = current+1
+  if(nextIndex === 4){
+    nextIndex = 0;
+  }
+  
+  go(nextIndex);
+  current = nextIndex;
+},3000);
+  </script>
+</body>
+
+</html>
